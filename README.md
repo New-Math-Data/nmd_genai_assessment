@@ -1,12 +1,16 @@
 # GenAI Document Processing Pipeline — Technical Assessment
 
-**Time:** 90 minutes (setup not counted — clock starts at `terraform init`)
+**Estimated Time:** 2-3 hours (machine setup time not included)
 
 ## What You're Building
 
 A serverless document processing pipeline: S3 → EventBridge → Step Functions → Lambda + Bedrock → S3.
 
-The infrastructure and pipeline skeleton are working. Your job is to **implement the three Bedrock functions**, deploy, test end-to-end, and answer discussion questions.
+The infrastructure and pipeline skeleton are working. Your job is to:
+- implement the three Bedrock functions
+- deploy
+- test end-to-end
+- answer discussion questions
 
 ```
 S3 (/uploads/)  →  EventBridge  →  Step Functions
@@ -129,23 +133,14 @@ Sonnet, Opus, and other model families are not available. Design your prompts fo
 
 | Area | What we look for |
 |---|---|
+| **Git usage** | Atomic commits with descriptive messages, logical progression of work |
 | **Bedrock implementation** | Prompt quality, API usage, JSON parsing, error handling |
+| **Code quality** | Clean structure, type safety (e.g., Pydantic models for Bedrock responses), input validation, consistent patterns |
 | **Deployment** | Working end-to-end pipeline (Terraform → Docker → Lambda → S3 results) |
 | **Discussion answers** | Depth of reasoning, real-world awareness, clear communication |
-| **Git usage** | Atomic commits with descriptive messages, logical progression of work |
 
 ## Tips
 
 - **Commit early and often.** We review your process, not just the end state.
-- **Partial completion is fine.** Depth over breadth — a polished classify function beats three rushed ones.
 - **Read the existing code.** `src/tasks/preprocess.py` and `src/common/aws.py` show the patterns to follow.
-- **If you get stuck**, document what you tried and move on.
-
-## Suggested Time
-
-| Phase | Time |
-|---|---|
-| Implement Bedrock functions | 30 min |
-| Deploy, test, iterate | 20 min |
-| Discussion questions | 40 min |
-| **Total** | **90 minutes** |
+- **Think about this as a project for a client.** Either in your code or in the discussion questions, address missing components or features that a production quality project would need. 
